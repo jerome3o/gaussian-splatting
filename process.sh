@@ -34,5 +34,5 @@ FILE_NAME=$(basename $VIDEO_FILE)
 #   mv *.jpg input
 # )
 
-python convert.py -s $DATA_DIR
-python train.py -s $DATA_DIR
+# python convert.py -s $DATA_DIR
+conda run -n gaussian_splatting --no-capture-output python train.py -s $DATA_DIR --densify_until_iter 5000
